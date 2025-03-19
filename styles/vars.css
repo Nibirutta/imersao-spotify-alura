@@ -1,0 +1,18 @@
+:root {
+    /* Fonts */
+    --main-font: 'DM Sans', sans-serif;
+
+    /* Colors */
+    --main-color-background: #000000;
+    --button-color-background: #ffffff;
+    --button-font-color: #000000;
+    --main-color: #121212;
+    --secondary-color: #242424;
+    --font-main-color: #b3b3b3;
+    --font-secondary-color: #ffffff;
+    --border-main-color: #878787;
+    --gradient-first-color: #ba159c;
+    --gradient-second-color: #4196ff;
+    --bg-icon: #131313;
+    --bg-arrow-color: rgba(0, 0, 0, 0.7);
+}

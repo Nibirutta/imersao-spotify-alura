@@ -1,6 +1,10 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--main-color-background);
+}
+
+body * {
+    color: var(--font-main-color);
+    font-family: var(--main-font);
 }
 
 .sidebar {
@@ -13,13 +17,13 @@ body {
 }
 
 .sidebar-navigation {
-    background-color: #121212;
+    background-color: var(--main-color);
     border-radius: 8px;
     padding: 16px 0px 0px 16px;
 }
 
 .sidebar-navigation .logo {
-    background: #121212;
+    background-color: var(--main-color);
     display: flex;
     border-radius: 8px;
     padding: 16px 0px 0px 16px;
@@ -40,20 +44,17 @@ body {
 
 .sidebar nav ul li a {
     text-decoration: none;
-    color: #b3b3b3;
     font-weight: 600;
     font-size: 14px;
-    font-family: 'DM Sans', sans-serif;
 }
 
 .library {
-    background-color: #121212;
+    background-color: var(--main-color);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     padding: 4px 8px;
-    color: #b3b3b3;
     font-weight: 600;
     font-size: 14px;
     margin-top: 10px;
@@ -67,12 +68,10 @@ body {
 .library .library-button {
     display: flex;
     margin-right: 10px;
-    color: #b3b3b3;
     background-color: transparent;
     border: 0px;
     font-size: 14px;
     font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
     text-align: center;
     text-decoration: none;
     text-transform: none;
@@ -100,7 +99,7 @@ body {
     margin: 8px 0px;
     padding: 16px 20px;
     border-radius: 10px;
-    background-color: #242424;
+    background-color: var(--secondary-color);
 }
 
 .section-playlist .section-playlist-content {
@@ -109,9 +108,8 @@ body {
 }
 
 .section-playlist .section-playlist-content .text {
-    font-family: 'DM Sans', sans-serif;
     padding-bottom: 14px;
-    color: #fff;
+    color: var(--font-secondary-color);
 }
 
 .section-playlist-content .title {
@@ -126,12 +124,11 @@ body {
 .section-playlist-content .section-playlist-button {
     display: flex;
     justify-content: center;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--button-color-background);
+    color: var(--button-font-color);
     border-radius: 20px;
     font-size: 12px;
     font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
     text-decoration: none;
     text-transform: none;
     padding: 10px;
@@ -145,7 +142,6 @@ body {
 }
 
 .sidebar .cookies a {
-    color: #b3b3b3;
     font-weight: 500;
     font-size: 10px;
     text-decoration: none;
@@ -158,14 +154,17 @@ body {
 .languages .languages-button {
     align-items: center;
     background-color: transparent;
-    border: 1px solid #878787;
-    color: #fff;
-    font-weight: bold;
+    border: 1px solid var(--border-main-color);
     width: 170px;
     margin: 8px;
     padding: 8px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.languages .languages-button span {
+    color: var(--font-secondary-color);
+    font-weight: bold;
 }
 
 .premium-footer {
@@ -176,37 +175,38 @@ body {
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 16px 32px 24px 32px;
-    background-image: linear-gradient(to right, #ba159c, #4196ff);
+    padding: 15px 40px;
+    background-image: linear-gradient(to right, var(--gradient-first-color), var(--gradient-second-color));
 }
 
 .premium-footer .premium-text {
-    display: flex;
-    flex-direction: column;
-    font-family: 'DM Sans', sans-serif;
-    gap: 12px;
+    flex-shrink: 0;
 }
 
 .premium-footer .premium-text .main-text {
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--font-secondary-color);
+    margin-bottom: 10px;
 }
 
 .premium-footer .premium-text .follow-up-text {
+    color: var(--font-secondary-color);
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .premium-footer .premium-button button{
-    background-color: #fff;
-    color: #000;
-    border-radius: 20px;
+    background-color: var(--button-color-background);
+    color: var(--button-font-color);
+    border-radius: 40px;
     font-weight: 700;
     font-size: 16px;
-    font-family: 'DM Sans', sans-serif;
     text-align: center;
     text-decoration: none;
     text-transform: none;
-    padding: 10px 20px;
+    padding: 14px 30px;
     border: 0px;
+    cursor: pointer;
 }

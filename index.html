@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Imersão</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/vars.css">
+    <link rel="stylesheet" href="styles/sidebar-footer.css">
+    <link rel="stylesheet" href="styles/main-content.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
 </head>
@@ -47,14 +49,8 @@
                 <div class="section-playlist-content">
                     <span class="text title">Crie sua primeira playlist</span>
                     <span class="text subtitle">É fácil, vamos te ajudar.</span>
-                    <button class="section-playlist-button">
-                        <span>Criar playlist</span>
-                    </button>
+                    <button class="section-playlist-button">Criar playlist</button>                    
                 </div>
-            </section>
-
-            <section class="section-playlist">
-
             </section>
 
             <div class="cookies">
@@ -70,10 +66,34 @@
         </div>
     </div>
 
+    <main>
+        <div class="main-conteiner">
+            <div class="header-navigation">
+                <div class="navigation">
+                    <button class="left-arrow">
+                        <img src="assets/icons/small-left.png" alt="Seta Esquerda">
+                    </button>
+                    <button class="right-arrow">
+                        <img src="assets/icons/small-right.png" alt="Seta Direita">
+                    </button>
+                </div>
+                <div class="header-search">
+                    <img src="assets/icons/search.png" alt="">
+                    <input id="search-input" type="text" maxlength="50" placeholder="O que você quer ouvir?">
+                </div>
+
+                <div class="header-login">
+                    <button class="subscribe">Inscreva-se</button>
+                    <button class="login">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer class="premium-footer">
         <div class="premium-text">
-            <span class="main-text">TESTAR O PREMIUM DE GRAÇA</span>
-            <span class="follow-up-text">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</span>
+            <p class="main-text">Testar o premium de graça</p>
+            <p class="follow-up-text">Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de crédito.</p>
         </div>
         <div class="premium-button">
             <button type="button">Inscreva-se grátis</button>
