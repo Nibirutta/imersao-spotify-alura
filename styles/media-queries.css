@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1420px) {
+    .header-search {
+        width: 364px;
+    }
+
+    .scroll-list-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .scroll-list-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
