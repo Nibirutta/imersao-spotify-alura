@@ -14,55 +14,60 @@
 </head>
 <body>
     <div class="sidebar">
-        <nav class="sidebar-navigation">
-            <div class="logo">
-                <a href="">
-                    <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
-                </a>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-home"></span>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-search"></span>
-                            <span>Buscar</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>    
-        </nav>
-        <div class="library">
-            <div class="library-content">
-                <button class="library-button">
-                    <span class="fa fas fa-book"></span>
-                    <span>Sua blibioteca</span>
-                </button>
-                <span class="fa fa-plus"></span>
-            </div>
-
-            <section class="section-playlist">
-                <div class="section-playlist-content">
-                    <span class="text title">Crie sua primeira playlist</span>
-                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
-                    <button class="section-playlist-button">Criar playlist</button>                    
+        <button id="sidebar-hide-button" class="hide-button">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div id="sidebar-content" class="sidebar-content">
+            <nav class="sidebar-navigation">
+                <div class="logo">
+                    <a href="">
+                        <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
+                    </a>
                 </div>
-            </section>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-home"></span>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-search"></span>
+                                <span>Buscar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>    
+            </nav>
+            <div class="library">
+                <div class="library-content">
+                    <button class="library-button">
+                        <span class="fa fas fa-book"></span>
+                        <span>Sua blibioteca</span>
+                    </button>
+                    <span class="fa fa-plus"></span>
+                </div>
 
-            <div class="cookies">
-                <a href="">Cookies</a>
-            </div>
+                <section class="section-playlist">
+                    <div class="section-playlist-content">
+                        <span class="text title">Crie sua primeira playlist</span>
+                        <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                        <button class="section-playlist-button">Criar playlist</button>                    
+                    </div>
+                </section>
 
-            <div class="languages">
-                <button class="languages-button">
-                    <span class="fa fa-globe"></span>
-                    <span>Português do Brasil</span>
-                </button>
+                <div class="cookies">
+                    <a href="">Cookies</a>
+                </div>
+
+                <div class="languages">
+                    <button class="languages-button">
+                        <span class="fa fa-globe"></span>
+                        <span>Português do Brasil</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -86,6 +91,23 @@
                 <div class="header-login">
                     <button class="subscribe">Inscreva-se</button>
                     <button class="login">Entrar</button>
+                </div>
+            </nav>
+
+            <nav class="header-navigation-mobile">
+                <div>
+                    <div class="navigation">
+                        <button class="left-arrow">
+                            <img src="assets/icons/small-left.png" alt="Seta Esquerda">
+                        </button>
+                        <button class="right-arrow">
+                            <img src="assets/icons/small-right.png" alt="Seta Direita">
+                        </button>
+                    </div>
+                    <div class="header-search">
+                        <img src="assets/icons/search.png" alt="">
+                        <input id="search-input" type="text" maxlength="50" placeholder="O que você quer ouvir?">
+                    </div>
                 </div>
             </nav>
 

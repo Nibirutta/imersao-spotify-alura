@@ -2,6 +2,11 @@ const searchInput = document.getElementById('search-input');
 const searchList = document.getElementById('search-list');
 const currentPlaylist = document.getElementById('current-playlist');
 
+document.getElementById("sidebar-hide-button").addEventListener("click", function() {
+    document.getElementById("sidebar-content").classList.add("hidden");
+});
+
+/*
 addEventListener('input', function() {
     const artistName = searchInput.value.toLowerCase();
     console.log(artistName);
@@ -38,4 +43,4 @@ function displayArtists(artists) {
     });
 
     searchList.classList.remove("hidden");
-}
+}*/

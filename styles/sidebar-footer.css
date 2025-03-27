@@ -1,3 +1,5 @@
+/* GENERALS */
+
 body {
     background-color: var(--main-color-background);
 }
@@ -7,13 +9,15 @@ body * {
     font-family: var(--main-font);
 }
 
+/* NAV BAR */
+
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     padding: 12px;
-    width: 300px;
+    width: 30%;
 }
 
 .sidebar-navigation {
@@ -45,8 +49,10 @@ body * {
 .sidebar nav ul li a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
+
+/* LIBRARY */
 
 .library {
     background-color: var(--main-color);
@@ -56,21 +62,23 @@ body * {
     flex-direction: column;
     padding: 4px 8px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-top: 10px;
 }
 
 .library .library-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .library .library-button {
     display: flex;
+    align-items: center;
     margin-right: 10px;
     background-color: transparent;
     border: 0px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
@@ -79,7 +87,7 @@ body * {
 }
 
 .library .library-content .fa {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-right: 10px;
     font-weight: 300;
     padding-right: 8px;
@@ -95,7 +103,7 @@ body * {
     align-items: flex-start;
     gap: 20px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.875rem;
     margin: 8px 0px;
     padding: 16px 20px;
     border-radius: 10px;
@@ -118,7 +126,7 @@ body * {
 
 .section-playlist-content .subtitle {
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .section-playlist-content .section-playlist-button {
@@ -127,7 +135,7 @@ body * {
     background-color: var(--button-color-background);
     color: var(--button-font-color);
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: none;
@@ -143,7 +151,7 @@ body * {
 
 .sidebar .cookies a {
     font-weight: 500;
-    font-size: 10px;
+    font-size: 0.675rem;
     text-decoration: none;
 }
 
@@ -167,15 +175,18 @@ body * {
     font-weight: bold;
 }
 
+/* FOOTER */
+
 .premium-footer {
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
     bottom: 0;
     right: 0;
     left: 0;
-    padding: 15px 40px;
+    padding: 15px 30px;
     background-image: linear-gradient(to right, var(--gradient-first-color), var(--gradient-second-color));
 }
 
@@ -186,7 +197,7 @@ body * {
 .premium-footer .premium-text .main-text {
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 0.7rem;
     color: var(--font-secondary-color);
     margin-bottom: 10px;
 }
@@ -194,7 +205,7 @@ body * {
 .premium-footer .premium-text .follow-up-text {
     color: var(--font-secondary-color);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 .premium-footer .premium-button button{
@@ -202,11 +213,26 @@ body * {
     color: var(--button-font-color);
     border-radius: 40px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
     text-decoration: none;
     text-transform: none;
-    padding: 14px 30px;
+    padding: 10px 20px;
     border: 0px;
     cursor: pointer;
+}
+
+/* MOBILE */
+
+.hide-button {
+    display: none;
+    position: absolute;
+    top: 1.5%;
+    right: -2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--button-color-background);
+    background-color: var(--main-color);
+    border-radius: 0 50% 50% 0;
+    border: 0px;
 }
