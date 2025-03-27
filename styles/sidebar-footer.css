@@ -16,8 +16,7 @@ body * {
     top: 0;
     left: 0;
     bottom: 0;
-    padding: 12px;
-    width: 30%;
+    width: var(--sidebar-width);
 }
 
 .sidebar-navigation {
@@ -232,7 +231,8 @@ body * {
     width: 2.5rem;
     height: 2.5rem;
     color: var(--button-color-background);
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     border-radius: 0 50% 50% 0;
     border: 0px;
+    z-index: 1000;
 }

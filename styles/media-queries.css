@@ -16,6 +16,16 @@
     }
 }
 
+@media (min-width: 800px) {
+    .sidebar {
+        width: 30% !important;
+    }
+
+    .sidebar-content {
+        width: 100% !important;
+    }
+}
+
 @media only screen and (max-width: 510px) {
     .scroll-list-items {
         grid-template-columns: 1fr;
@@ -34,7 +44,14 @@
     .sidebar {
         z-index: 1;
         background-color: var(--main-color);
-        width: 60%;
+        width: 0%;
+        transition: width 0.5s;
+    }
+
+    .sidebar-content {
+        overflow-x: hidden;
+        width: 0%;
+        transition: width 0.5s;
     }
 
     .header-navigation-mobile {
