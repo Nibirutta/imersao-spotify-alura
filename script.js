@@ -15,6 +15,8 @@ document.getElementById("sidebar-hide-button").addEventListener("click", functio
     }
 });
 
+addEventListener('resize', syncSearchInputs);
+
 addEventListener('input', function() {
     var searchInput;
 
@@ -25,7 +27,7 @@ addEventListener('input', function() {
     }
 
     const artistName = searchInput.value.toLowerCase();
-    console.log(artistName);
+
     if(artistName === '') {
         currentPlaylist.classList.add('hidden');
         searchList.classList.remove('hidden');
@@ -50,13 +52,43 @@ function requestApi(artistName) {
 
 function displayArtists(artists) {
     currentPlaylist.classList.add("hidden");
-    var artistName = document.getElementById('artist-name');
-    var artistImage = document.getElementById('artist-img');
+    var artistContainer = document.getElementById("artist-container");
 
-    artists.forEach(element => {
-        artistName.textContent = element.name;
-        artistImage.src = element.urlImg;
+    artistContainer.innerHTML = "";
+
+    artists.forEach(artist => {
+        var artistCard = document.createElement("li");
+        artistCard.className = "artist-card";
+
+        artistCard.innerHTML = `
+        <div class="card-img">
+            <img class="artist-img" src="${artist.urlImg}">
+            <span class="fa fa-solid fa-play"></span>
+        </div>
+        <div class="card-text">
+            <a title="${artist.name}" class="vst" href="">
+                <span class="artist-name">${artist.name}</span>
+                <span class="artist-category">${artist.genre || "Artist"}</span>
+            </a>
+        </div>
+        `;
+
+        artistContainer.appendChild(artistCard);
     });
 
     searchList.classList.remove("hidden");
+}
+
+function syncSearchInputs() {
+    var activeInput = document.body.clientWidth < 800
+    ? document.getElementById("search-input-mobile")
+    : document.getElementById("search-input");
+
+    var searchValue = activeInput.value;
+
+    document.querySelectorAll(".search-input").forEach(input => {
+        if (input !== activeInput) {
+            input.value = searchValue;
+        }
+    });
 }

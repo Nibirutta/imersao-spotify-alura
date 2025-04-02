@@ -280,7 +280,7 @@ body, html {
 .artist-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 16px;
 }
 
 .artist-card {
@@ -304,10 +304,10 @@ body, html {
 
 .artist-img {
     height: 100%;
+    width: 100%;
     top: 0;
     left: 0;
     position: absolute;
-    width: 100%;
     border-radius: 50%;
 }
   
@@ -348,7 +348,8 @@ body, html {
 }
 
 .card-text a {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     vertical-align: middle;
     text-decoration: none;
