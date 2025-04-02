@@ -2,10 +2,18 @@
     .scroll-list-items {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .artist-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media only screen and (max-width: 1200px) {
     .scroll-list-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -13,6 +21,20 @@
 @media only screen and (max-width: 800px) {
     .scroll-list-items {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .artist-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .scroll-list-items {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -23,12 +45,6 @@
 
     .sidebar-content {
         width: 100% !important;
-    }
-}
-
-@media only screen and (max-width: 510px) {
-    .scroll-list-items {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -52,6 +68,10 @@
         overflow-x: hidden;
         width: 0%;
         transition: width 0.5s;
+    }
+
+    .header-mobile {
+        display: block;
     }
 
     .header-navigation-mobile {

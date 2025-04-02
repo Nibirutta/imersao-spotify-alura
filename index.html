@@ -93,23 +93,30 @@
                     <button class="login">Entrar</button>
                 </div>
             </nav>
-
-            <nav class="header-navigation-mobile">
-                <div>
-                    <div class="navigation">
-                        <button class="left-arrow">
-                            <img src="assets/icons/small-left.png" alt="Seta Esquerda">
-                        </button>
-                        <button class="right-arrow">
-                            <img src="assets/icons/small-right.png" alt="Seta Direita">
-                        </button>
-                    </div>
-                    <div class="header-search">
-                        <img src="assets/icons/search.png" alt="">
-                        <input id="search-input" type="text" maxlength="50" placeholder="O que você quer ouvir?">
-                    </div>
+            
+            <div class="header-mobile">
+                <div class="logo">
+                    <a href="">
+                        <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
+                    </a>
                 </div>
-            </nav>
+                <nav class="header-navigation-mobile">                    
+                    <div>
+                        <div class="navigation">
+                            <button class="left-arrow">
+                                <img src="assets/icons/small-left.png" alt="Seta Esquerda">
+                            </button>
+                            <button class="right-arrow">
+                                <img src="assets/icons/small-right.png" alt="Seta Direita">
+                            </button>
+                        </div>
+                        <div class="header-search">
+                            <img src="assets/icons/search.png" alt="">
+                            <input id="search-input-mobile" type="text" maxlength="50" placeholder="O que você quer ouvir?">
+                        </div>
+                    </div>
+                </nav>
+            </div>
 
             <div class="playlist-conteiner">
                 <div id="current-playlist" class="current-playlist">
@@ -214,14 +221,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="search-list" class="hidden">
-                    <div class="artist-container">
-                        <div class="artist-card">
+                <div id="search-list" class="search-list hidden">
+                    <ul class="artist-container">
+                        <li class="artist-card">
                             <div class="card-img">
                                 <img id="artist-img" class="artist-img" src="">
-                                <div class="play">
-                                    <span class="fa fa-solid fa-play"></span>
-                                </div>
+                                <span class="fa fa-solid fa-play"></span>
                             </div>
                             <div class="card-text">
                                 <a title="Foo Fighters" class="vst" href="">
@@ -229,8 +234,8 @@
                                     <span class="artist-category"></span>
                                 </a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
