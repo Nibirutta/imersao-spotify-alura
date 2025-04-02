@@ -1,8 +1,29 @@
-const searchInput = document.getElementById('search-input');
+const sidebarButton = document.getElementById('sidebar-hide-button');
 const searchList = document.getElementById('search-list');
 const currentPlaylist = document.getElementById('current-playlist');
+var buttonState = false;
+
+document.getElementById("sidebar-hide-button").addEventListener("click", function() {
+    if(buttonState === false) {
+        document.getElementById("sidebar").style.width = "60%";
+        document.getElementById("sidebar-content").style.width = "100%";
+        buttonState = true;
+    } else {
+        document.getElementById("sidebar").style.width = "0%";
+        document.getElementById("sidebar-content").style.width = "0%";
+        buttonState = false;
+    }
+});
 
 addEventListener('input', function() {
+    var searchInput;
+
+    if(this.document.body.clientWidth < 800) {
+        searchInput = document.getElementById('search-input-mobile');
+    } else {
+        searchInput = document.getElementById('search-input');
+    }
+
     const artistName = searchInput.value.toLowerCase();
     console.log(artistName);
     if(artistName === '') {

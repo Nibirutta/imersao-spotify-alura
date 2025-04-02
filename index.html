@@ -13,56 +13,61 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
 </head>
 <body>
-    <div class="sidebar">
-        <nav class="sidebar-navigation">
-            <div class="logo">
-                <a href="">
-                    <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
-                </a>
-            </div>
-            <div>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-home"></span>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-search"></span>
-                            <span>Buscar</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>    
-        </nav>
-        <div class="library">
-            <div class="library-content">
-                <button class="library-button">
-                    <span class="fa fas fa-book"></span>
-                    <span>Sua blibioteca</span>
-                </button>
-                <span class="fa fa-plus"></span>
-            </div>
-
-            <section class="section-playlist">
-                <div class="section-playlist-content">
-                    <span class="text title">Crie sua primeira playlist</span>
-                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
-                    <button class="section-playlist-button">Criar playlist</button>                    
+    <div id="sidebar" class="sidebar">
+        <button id="sidebar-hide-button" class="hide-button">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div id="sidebar-content" class="sidebar-content">
+            <nav class="sidebar-navigation">
+                <div class="logo">
+                    <a href="">
+                        <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
+                    </a>
                 </div>
-            </section>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-home"></span>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-search"></span>
+                                <span>Buscar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>    
+            </nav>
+            <div class="library">
+                <div class="library-content">
+                    <button class="library-button">
+                        <span class="fa fas fa-book"></span>
+                        <span>Sua blibioteca</span>
+                    </button>
+                    <span class="fa fa-plus"></span>
+                </div>
 
-            <div class="cookies">
-                <a href="">Cookies</a>
-            </div>
+                <section class="section-playlist">
+                    <div class="section-playlist-content">
+                        <span class="text title">Crie sua primeira playlist</span>
+                        <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                        <button class="section-playlist-button">Criar playlist</button>                    
+                    </div>
+                </section>
 
-            <div class="languages">
-                <button class="languages-button">
-                    <span class="fa fa-globe"></span>
-                    <span>Português do Brasil</span>
-                </button>
+                <div class="cookies">
+                    <a href="">Cookies</a>
+                </div>
+
+                <div class="languages">
+                    <button class="languages-button">
+                        <span class="fa fa-globe"></span>
+                        <span>Português do Brasil</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -88,6 +93,30 @@
                     <button class="login">Entrar</button>
                 </div>
             </nav>
+            
+            <div class="header-mobile">
+                <div class="logo">
+                    <a href="">
+                        <img src="assets/icons/logo-spotify.png" alt="Logo Spotify">
+                    </a>
+                </div>
+                <nav class="header-navigation-mobile">                    
+                    <div>
+                        <div class="navigation">
+                            <button class="left-arrow">
+                                <img src="assets/icons/small-left.png" alt="Seta Esquerda">
+                            </button>
+                            <button class="right-arrow">
+                                <img src="assets/icons/small-right.png" alt="Seta Direita">
+                            </button>
+                        </div>
+                        <div class="header-search">
+                            <img src="assets/icons/search.png" alt="">
+                            <input id="search-input-mobile" type="text" maxlength="50" placeholder="O que você quer ouvir?">
+                        </div>
+                    </div>
+                </nav>
+            </div>
 
             <div class="playlist-conteiner">
                 <div id="current-playlist" class="current-playlist">
@@ -192,14 +221,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="search-list" class="hidden">
-                    <div class="artist-container">
-                        <div class="artist-card">
+                <div id="search-list" class="search-list hidden">
+                    <ul class="artist-container">
+                        <li class="artist-card">
                             <div class="card-img">
                                 <img id="artist-img" class="artist-img" src="">
-                                <div class="play">
-                                    <span class="fa fa-solid fa-play"></span>
-                                </div>
+                                <span class="fa fa-solid fa-play"></span>
                             </div>
                             <div class="card-text">
                                 <a title="Foo Fighters" class="vst" href="">
@@ -207,8 +234,8 @@
                                     <span class="artist-category"></span>
                                 </a>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
