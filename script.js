@@ -3,6 +3,7 @@ const searchList = document.getElementById('search-list');
 const currentPlaylist = document.getElementById('current-playlist');
 var buttonState = false;
 
+// Esconde e revela a sidebar ao cliclar no botão
 document.getElementById("sidebar-hide-button").addEventListener("click", function() {
     if(buttonState === false) {
         document.getElementById("sidebar").style.width = "60%";
@@ -15,8 +16,10 @@ document.getElementById("sidebar-hide-button").addEventListener("click", functio
     }
 });
 
+// Verifa constantemente o tamanho da tela do usuário e mantém a searchbar atualizada
 addEventListener('resize', syncSearchInputs);
 
+// Ao inserir algum nome na searchbar, realiza a pesquisa do artista correspondente
 addEventListener('input', function() {
     var searchInput;
 
@@ -38,6 +41,7 @@ addEventListener('input', function() {
     requestApi(artistName);
 });
 
+// Procura pelos dados na api
 async function requestApi(artistName) {
     // API simulada localmente
     //const url = `http://localhost:3000/artists`;
@@ -69,6 +73,7 @@ async function requestApi(artistName) {
     }
 }
 
+// Posiciona os artistas correspondentes na lista
 function displayArtists(artists) {
     currentPlaylist.classList.add("hidden");
     var artistContainer = document.getElementById("artist-container");
@@ -98,6 +103,7 @@ function displayArtists(artists) {
     searchList.classList.remove("hidden");
 }
 
+// Realiza a sincronização da searchbar
 function syncSearchInputs() {
     var activeInput = document.body.clientWidth < 800
     ? document.getElementById("search-input-mobile")

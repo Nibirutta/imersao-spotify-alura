@@ -1,19 +1,19 @@
 # Spotify Imersão Alura
 
-Um clone responsivo da interface web do Spotify desenvolvido com tecnologias frontend básicas.
+Um clone responsivo baseado na interface web do Spotify desenvolvido com HTML, CSS, JS e um pouco de JSON para simular a API.
 
 ## 📋 Descrição
 
 Recriei a interface do Spotify como projeto de aprendizado, implementando:
 
-- Layout fiel ao original com adaptações pessoais
+- Layout parecido ao original, apenas com algumas adaptações pessoais
 - Design totalmente responsivo
 - Sistema de mock data com JSON
 - Interações dinâmicas com JavaScript
 
 ## 🎯 Funcionalidades Principais
 
-✅ Player de música funcional  
+✅ Animações para dar maior interativida  
 ✅ Navegação entre artistas/álbuns  
 ✅ Barra de pesquisa dinâmica  
 ✅ Dados mockados de artistas  
@@ -27,21 +27,22 @@ Recriei a interface do Spotify como projeto de aprendizado, implementando:
 - JavaScript ES6+
 
 **Mock API:**
-- JSON local
+- JSON
 - Fetch API para "consumir" os dados
 
 ## 🔮 Próximos Passos
 
 1. **Migrar para React** (em andamento)
 2. **Integrar API real do Spotify**
-3. **Implementar features premium:**
+3. **Possível implementação de outras features:**
    - Criação de playlists
    - Login de usuário
    - Biblioteca pessoal
+4. **Aplicar o conhecimento adquirido até aqui em um projeto pessoal**
 
 ## 💡 Como Executar
 
-- Basta acessar esse [link](https://imersao-spotify-alura-liard.vercel.app/).
+- Basta acessar esse [link](https://imersao-spotify-alura-one.vercel.app/).
 
 ## 📢 Aceito sugestões
 
