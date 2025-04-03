@@ -38,16 +38,35 @@ addEventListener('input', function() {
     requestApi(artistName);
 });
 
-function requestApi(artistName) {
-    const url = `http://localhost:3000/artists`;
+async function requestApi(artistName) {
+    // API simulada localmente
+    //const url = `http://localhost:3000/artists`;
+    // API simulada via jsonbin
+    const url = "https://api.jsonbin.io/v3/b/67ee6ee98561e97a50f7f8b4";
+    const apiKey = "$2a$10$eQXImx2J5dORy49Nxbp.3.uZGQM/WUCU9qtp/wOW2MUmLHn5JCnQG";
 
-    fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-            const filteredData = data.filter((artist) => artist.name.toLowerCase().includes(artistName));
-            console.log(filteredData);
-            displayArtists(filteredData);
-        })
+    try {
+        const response = await fetch(url, {
+            headers: {
+                'X-Access-Key': apiKey
+            }
+        });
+
+        if(!response.ok){
+            throw new Error(`Erro HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const artists = data.record.artists;
+
+        const filteredData = artists.filter(artist => 
+            artist.name.toLowerCase().includes(artistName.toLowerCase())
+        );
+
+        displayArtists(filteredData);
+    } catch(error) {
+        console.log(`Falha na requisição dos dados, dado ao ${error}`);
+    }
 }
 
 function displayArtists(artists) {
